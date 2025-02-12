@@ -1,0 +1,49 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-gray-100 p-6">
+      <header className="text-center py-10">
+        <h1 className="text-4xl font-bold">Murawski – Dietetyka z pasją</h1>
+        <p className="mt-4 text-lg">Indywidualne plany żywieniowe i konsultacje dietetyczne</p>
+        <Button className="mt-6">Umów konsultację</Button>
+      </header>
+      
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-12">
+        <Card>
+          <CardContent className="p-6">
+            <h2 className="text-xl font-semibold">O mnie</h2>
+            <p className="mt-2">Jestem certyfikowanym dietetykiem z pasją do zdrowego stylu życia...</p>
+          </CardContent>
+        </Card>
+        
+        <Card>
+          <CardContent className="p-6">
+            <h2 className="text-xl font-semibold">Oferta</h2>
+            <ul className="mt-2 list-disc pl-5">
+              <li>Konsultacje dietetyczne</li>
+              <li>Analiza składu ciała</li>
+              <li>Plany żywieniowe</li>
+            </ul>
+          </CardContent>
+        </Card>
+      </section>
+      
+      <section className="max-w-3xl mx-auto mt-12">
+        <h2 className="text-2xl font-bold text-center">Kontakt</h2>
+        <div className="bg-white p-6 rounded-lg shadow-md mt-6">
+          <form>
+            <Input className="mb-4" placeholder="Imię i nazwisko" />
+            <Input className="mb-4" placeholder="Email" type="email" />
+            <Textarea className="mb-4" placeholder="Twoja wiadomość" />
+            <Button type="submit">Wyślij</Button>
+          </form>
+        </div>
+      </section>
+    </div>
+  );
+}
